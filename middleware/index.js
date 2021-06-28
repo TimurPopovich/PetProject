@@ -4,10 +4,7 @@ module.exports = function (app) {
   const session = require('express-session');
   const FileStore = require('session-file-store')(session);
   const cookieParser = require('cookie-parser');
-  const morgan = require('morgan');
   const cookieCleaner = require('./cookie');
-
-  app.use(morgan('dev'));
 
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
