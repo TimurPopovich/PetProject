@@ -1,0 +1,46 @@
+<div id="profileUser" class="container">
+
+  {{#if findUser}}
+
+  <div id="profileIcon" class="d-flex flex-column align-items-center p-2 bd-highlight">
+
+    <h2>{{findUser.login}}</h2>
+
+    <button id="editProfileBtn" type="submit" class="btn btn-primary">Редактировать профиль</button>
+
+  </div>
+
+  {{/if}}
+
+  <div id="containerCardProfile" class="findCardProfile uiInputContainerProfile">
+
+    {{#each interes}}
+
+    <div data-link="{{this.url}}" class="Onecard">
+
+      <div>
+        <div data-link="{{this.url}}" class="cardHeader">{{this.name}}</div>
+        <div data-link="{{this.url}}" class="cardNick">{{this.author}}</div>
+        <div data-link="{{this.url}}" class="cardBody"><img src="{{this.avatar}}" class="uiImg">{{this.description}}
+        </div>
+      </div>
+
+      <div data-link="{{this.url}}" class="cardFooter">
+        <p>
+          {{this.stars}}
+          <i class="iconStar">⭐</i>
+          {{this.forks}}
+          <i>🔗</i><br>
+          {{this.language}}
+
+          <button id="btnDelete" class="btn btn-danger">Удалить</button>
+
+        </p>
+      </div>
+
+    </div>
+
+    {{/each}}
+  </div>
+
+</div>
