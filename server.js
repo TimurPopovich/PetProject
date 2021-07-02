@@ -24,7 +24,7 @@ app.use('/profile', profileRouter);
 app.listen(port, () => {
   console.log(`Server started at ${port}`);
 
-  connect('mongodb://localhost:27017/PotluckParty', {
+  connect('mmongodb+srv://Admin:Beavers228@zoo.0mnlx.mongodb.net/Pet', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   }),
