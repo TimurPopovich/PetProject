@@ -17,7 +17,6 @@ document.addEventListener('click', async (event) => {
     event.preventDefault();
 
     const { name, email, password } = event.target.parentNode;
-    console.log(name, email, password);
     const response = await fetch('/login', {
       method: 'PUT',
       headers: {
